@@ -7,7 +7,7 @@ $(document).ready(function() {
       // Verificar las credenciales
       if (username === 'admin' && password === '12345') {
         // Credenciales válidas, redirigir a la pantalla de wallet
-        window.location.href = '/html/wallet.html';
+        window.location.href = '/html/menu.html';
       } else {
         // Credenciales inválidas, mostrar mensaje de error
         alert('Usuario o contraseña invalido. Inténtalo de nuevo.');
