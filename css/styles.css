@@ -16,6 +16,27 @@ body{
     margin-bottom: 15px;
 }
 
-.btn-login{
+/*.btn-login{
     background-color: #7C3981;
+    width: 30rem;
 }
+*/
+.btn-login {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    width: 30rem;
+    background: linear-gradient(to bottom, #7C3981, black);
+    color: white;
+    border-radius: 25px;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.btn-login:hover {
+    background: #7C3981; /* Cambia el color al pasar el ratón sobre el botón */
+    color: white;
+}
+
