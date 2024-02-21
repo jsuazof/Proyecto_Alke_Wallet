@@ -1,0 +1,21 @@
+
+
+body{
+    background-color: #100C0C;
+}
+
+
+
+
+.gradient-border {
+    background-color : #100C0C;
+    border-width: 2px; /* Ancho del borde */
+    border-style: solid;
+    border-image: linear-gradient(to right, #9B03C0, #FDFCFE); /* Cambia los colores según tus preferencias */
+    border-image-slice: 1; /* Controla cómo se divide el gradiente en las secciones del borde */
+    margin-bottom: 15px;
+}
+
+.btn-login{
+    background-color: #7C3981;
+}
