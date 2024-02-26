@@ -1,12 +1,24 @@
 $(document).ready(function () {
+  // Función para mostrar alerta de Bootstrap
+  const appendAlert = (message, type) => {
+    const wrapper = document.createElement("div");
+    wrapper.innerHTML = [
+      `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+      `   <div>${message}</div>`,
+      '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+      "</div>",
+    ].join("");
 
-   // Definir un arreglo de usuarios y contraseñas
-   const users = [
+    // Agrega la alerta al contenedor de alertas en el HTML
+    $("#liveAlertPlaceholder").append(wrapper);
+  };
+
+  // Definir un arreglo de usuarios y contraseñas
+  const users = [
     { username: "admin", password: "12345" },
-    { username: "user", password: "223344" }
+    { username: "user", password: "223344" },
     // Puedes agregar más usuarios según sea necesario
   ];
-
 
   $("#loginForm").submit(function (event) {
     event.preventDefault();
@@ -14,28 +26,20 @@ $(document).ready(function () {
     let password = $("#password").val();
 
     // Verificar las credenciales
-    const user = users.find(u => u.username === username && u.password === password);
+    const user = users.find(
+      (u) => u.username === username && u.password === password
+    );
 
     if (user) {
       // Credenciales válidas, redirigir a la pantalla de wallet
       window.location.href = "/html/menu.html";
     } else {
       // Credenciales inválidas, mostrar mensaje de error
-      alert("Usuario o contraseña inválido. Inténtalo de nuevo.");
+      appendAlert(
+        "Usuario o contraseña inválido. Inténtalo de nuevo.",
+        "danger"
+      );
     }
-  });
-
-
-    // Verificar las credenciales
-   
-    /* if (username === "admin" && password === "12345") {
-      // Credenciales válidas, redirigir a la pantalla de wallet
-      window.location.href = "/html/menu.html";
-    } else {
-      // Credenciales inválidas, mostrar mensaje de error
-      alert("Usuario o contraseña inválido. Inténtalo de nuevo.");
-    }
-    */
   });
 
   // Corrección aquí: usar $(document).ready(function() {...})
