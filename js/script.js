@@ -11,7 +11,10 @@ $(document).ready(function () {
 
     // Agrega la alerta al contenedor de alertas en el HTML
     $("#liveAlertPlaceholder").append(wrapper);
+    
   };
+
+  
 
   // Definir un arreglo de usuarios y contraseñas
   const users = [
@@ -47,7 +50,7 @@ $(document).ready(function () {
     // Agrega un evento de clic al botón de logout
     $("#logoutBtn").click(function () {
       // Simulamos cerrar la sesión, puedes agregar tu lógica real aquí
-      alert("¡Has cerrado sesión!");
+      appendAlert("¡Has cerrado sesión!");
       // Redirige a la página de inicio de sesión u otra página de tu elección
       window.location.href = "/index.html";
     });
@@ -65,9 +68,9 @@ $(document).ready(function () {
       balance += amount;
       updateBalance();
       $("#amount").val("");
-      alert("Depósito realizado!");
+      appendAlert("Depósito realizado!");
     } else {
-      alert("Monto inválido. Por favor, ingrese un número positivo.");
+      appendAlert("Monto inválido. Por favor, ingrese un número positivo.");
     }
   });
 
@@ -77,9 +80,9 @@ $(document).ready(function () {
       balance -= amount;
       updateBalance();
       $("#amount").val("");
-      alert("Retiro exitoso!");
+    appendAlert("Retiro exitoso!");
     } else {
-      alert("Cantidad no válida. Ingrese un número válido dentro de su saldo.");
+    appendAlert("Cantidad no válida. Ingrese un número válido dentro de su saldo.");
     }
   });
 });
