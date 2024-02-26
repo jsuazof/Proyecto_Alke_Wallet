@@ -1,17 +1,41 @@
 $(document).ready(function () {
+
+   // Definir un arreglo de usuarios y contraseñas
+   const users = [
+    { username: "admin", password: "12345" },
+    { username: "user", password: "223344" }
+    // Puedes agregar más usuarios según sea necesario
+  ];
+
+
   $("#loginForm").submit(function (event) {
     event.preventDefault();
-    var username = $("#username").val();
-    var password = $("#password").val();
+    let username = $("#username").val();
+    let password = $("#password").val();
 
     // Verificar las credenciales
-    if (username === "admin" && password === "12345") {
+    const user = users.find(u => u.username === username && u.password === password);
+
+    if (user) {
       // Credenciales válidas, redirigir a la pantalla de wallet
       window.location.href = "/html/menu.html";
     } else {
       // Credenciales inválidas, mostrar mensaje de error
       alert("Usuario o contraseña inválido. Inténtalo de nuevo.");
     }
+  });
+
+
+    // Verificar las credenciales
+   
+    /* if (username === "admin" && password === "12345") {
+      // Credenciales válidas, redirigir a la pantalla de wallet
+      window.location.href = "/html/menu.html";
+    } else {
+      // Credenciales inválidas, mostrar mensaje de error
+      alert("Usuario o contraseña inválido. Inténtalo de nuevo.");
+    }
+    */
   });
 
   // Corrección aquí: usar $(document).ready(function() {...})
@@ -25,14 +49,14 @@ $(document).ready(function () {
     });
   });
 
-  var balance = 0;
+  let balance = 0;
 
   function updateBalance() {
     $("#balance").text(balance.toFixed(2));
   }
 
   $("#depositBtn").click(function () {
-    var amount = parseFloat($("#amount").val());
+    let amount = parseFloat($("#amount").val());
     if (!isNaN(amount) && amount > 0) {
       balance += amount;
       updateBalance();
@@ -44,7 +68,7 @@ $(document).ready(function () {
   });
 
   $("#withdrawBtn").click(function () {
-    var amount = parseFloat($("#amount").val());
+    let amount = parseFloat($("#amount").val());
     if (!isNaN(amount) && amount > 0 && amount <= balance) {
       balance -= amount;
       updateBalance();
