@@ -11,26 +11,26 @@ $(document).ready(function () {
 
     // Agrega la alerta al contenedor de alertas en el HTML
     $("#liveAlertPlaceholder").append(wrapper);
-    
   };
 
-  
+  // Expresión regular para validar el formato de correo electrónico
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-  // Definir un arreglo de usuarios y contraseñas
-  const users = [
-    { username: "admin", password: "12345" },
-    { username: "user", password: "223344" },
-    // Puedes agregar más usuarios según sea necesario
-  ];
+    // Definir un arreglo de usuarios y contraseñas con correos electrónicos
+    const users = [
+      { username: "admin@example.com", password: "12345" },
+      { username: "user@example.com", password: "223344" },
+      // Puedes agregar más usuarios según sea necesario
+    ];
 
   $("#loginForm").submit(function (event) {
     event.preventDefault();
     let username = $("#username").val();
     let password = $("#password").val();
 
-    // Verificar las credenciales
-    const user = users.find(
-      (u) => u.username === username && u.password === password
+     // Verificar las credenciales y el formato del correo electrónico
+     const user = users.find(
+      (u) => u.username.toLowerCase() === username.toLowerCase() && u.password === password && emailRegex.test(username)
     );
 
     if (user) {
@@ -80,9 +80,11 @@ $(document).ready(function () {
       balance -= amount;
       updateBalance();
       $("#amount").val("");
-    appendAlert("Retiro exitoso!");
+      appendAlert("Retiro exitoso!");
     } else {
-    appendAlert("Cantidad no válida. Ingrese un número válido dentro de su saldo.");
+      appendAlert(
+        "Cantidad no válida. Ingrese un número válido dentro de su saldo."
+      );
     }
   });
 });
