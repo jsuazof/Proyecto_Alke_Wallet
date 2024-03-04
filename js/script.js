@@ -23,7 +23,7 @@ $(document).ready(function () {
     // Configura un temporizador para eliminar la alerta después de 5 segundos
     setTimeout(function () {
       wrapper.remove();
-    }, 2000);
+    }, 2500);
   };
 
   // Expresión regular para validar el formato de correo electrónico
