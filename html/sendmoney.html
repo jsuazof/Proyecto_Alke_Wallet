@@ -50,7 +50,7 @@
       </div>
     </nav>
     <main>
-      <div class="container-fluid">
+      <div class="container">
         <h2 class="d-flex text-center justify-content-center">
           Transferencias
         </h2>
@@ -83,7 +83,7 @@
                   </div>
                 </li>
                 <li class="list-group-item">
-                  <button type="submit" class="btn btn-secondary">
+                  <button type="submit" id="depositBtn" class="btn btn-secondary">
                     Enviar dinero
                   </button>
                 </li>
@@ -102,8 +102,28 @@
                 </li>
               </ul>
             </div>
+            
           </div>
         </div>
+      </div>
+      <div>
+
+       <!-- Formulario para agregar un nuevo contacto -->
+    <form id="addContactForm">
+      <label for="name">Nombre:</label>
+      <input type="text" id="name" required>
+
+      <label for="cbu">CBU:</label>
+      <input type="text" id="cbu" required>
+
+      <label for="alias">Alias:</label>
+      <input type="text" id="alias" required>
+
+      <label for="banco">Banco:</label>
+      <input type="text" id="banco" required>
+
+      <button type="submit">Agregar contacto</button>
+  </form>
       </div>
     </main>
 
@@ -122,6 +142,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="/js/script.js"></script>
+    <script src="/js/sendmoney.js"></script>
   </body>
 </html>
