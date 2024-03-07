@@ -54,7 +54,7 @@ $(document).ready(function () {
 
     if (user) {
       // Credenciales válidas, redirigir a la pantalla de wallet
-      window.location.href = "Proyecto_Alke_Wallet/html/menu.html";
+      window.location.href = "/Proyecto_Alke_Wallet/html/menu.html";
     } else {
       // Credenciales inválidas, mostrar mensaje de error
       appendAlert(
