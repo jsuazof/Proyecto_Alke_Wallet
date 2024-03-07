@@ -54,7 +54,7 @@ $(document).ready(function () {
 
     if (user) {
       // Credenciales válidas, redirigir a la pantalla de wallet
-      window.location.href = "/html/menu.html";
+      window.location.href = "./html/menu.html";
     } else {
       // Credenciales inválidas, mostrar mensaje de error
       appendAlert(
@@ -74,7 +74,7 @@ $(document).ready(function () {
       // Simulamos cerrar la sesión, puedes agregar tu lógica real aquí
       appendAlert("¡Has cerrado sesión!");
       // Redirige a la página de inicio de sesión u otra página de tu elección
-      window.location.href = "/index.html";
+      window.location.href = "./index.html";
     });
   });
 
