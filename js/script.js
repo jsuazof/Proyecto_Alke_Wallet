@@ -74,7 +74,7 @@ $(document).ready(function () {
       // Simulamos cerrar la sesión, puedes agregar tu lógica real aquí
       appendAlert("¡Has cerrado sesión!");
       // Redirige a la página de inicio de sesión u otra página de tu elección
-      window.location.href = "./index.html";
+      window.location.href = "../index.html";
     });
   });
 
