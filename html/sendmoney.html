@@ -54,76 +54,70 @@
         <h2 class="d-flex text-center justify-content-center">
           Transferencias
         </h2>
-        <div class="form-group d-flex justify-content-center">
-          <div class="card border-danger mb-3">
-            <div class="card-body text-danger">
-              <label for="searchContact"
-                ><h5>Agenda de transferencias:</h5></label
-              >
-              <input
-                type="text"
-                class="form-control"
-                id="searchContact"
-                placeholder="Buscar Contacto"
-              />
-            </div>
-            <div id="liveAlertPlaceholder">
-              <ul id="contactList" class="list-group list-group-flush">
-                <li class="list-group-item">
-                  <button type="submit" class="btn btn-secondary">
-                    Agregar nuevo contacto
-                  </button>
-                </li>
-                <li class="list-group-item">
-                  <div class="contact-info">
-                    <span class="contact-name">John Doe</span>
-                    <span class="contact-details"
-                      >CBU: 123456789, Alias: john.doe, Banco: ABC Bank</span
-                    >
-                  </div>
-                </li>
-                <li class="list-group-item">
-                  <button type="submit" id="depositBtn" class="btn btn-secondary">
-                    Enviar dinero
-                  </button>
-                </li>
-                <li class="list-group-item">
-                  <a href="menu.html" class="btn btn-secondary"
-                    >Volver al Menú Principal</a
+        <div class="form-group d-flex justify-content-center"
+        id="addContactForm">
+        <div class="card border-danger mb-3">
+          <div class="card-body text-danger">
+            <label for="searchContact"
+              ><h5>Agenda de transferencias:</h5></label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="searchContact"
+              placeholder="Buscar Contacto"
+            />
+          </div>
+          <div id="liveAlertPlaceholder">
+            <ul id="contactList" class="list-group list-group-flush">
+              <li class="list-group-item">
+                <button type="submit" class="btn btn-secondary">
+                  Agregar nuevo contacto
+                </button>
+              </li>
+              <li class="list-group-item">
+                <div class="contact-info">
+                  <span class="contact-name">John Doe</span>
+                  <span class="contact-details"
+                    >CBU: 123456789, Alias: john.doe, Banco: ABC Bank</span
                   >
-                </li>
-                <li class="list-group-item">
-                  <button
-                    id="logoutBtn"
-                    class="btn bg-gradient bg-success text-light"
-                  >
-                    Cerrar sesión
-                  </button>
-                </li>
-              </ul>
-            </div>
-            
+                </div>
+              </li>
+              <li class="list-group-item">
+                <button type="submit" id="depositBtn" class="btn btn-secondary">
+                  Enviar dinero
+                </button>
+              </li>
+              <li class="list-group-item">
+                <a href="menu.html" class="btn btn-secondary"
+                  >Volver al Menú Principal</a
+                >
+              </li>
+              <li class="list-group-item">
+                <button
+                  id="logoutBtn"
+                  class="btn bg-gradient bg-success text-light"
+                >
+                  Cerrar sesión
+                </button>
+              </li>
+              
+              <label for="name">Nombre:</label>
+              <input type="text" id="name" required />
+
+              <label for="cbu">CBU:</label>
+              <input type="text" id="cbu" required />
+
+              <label for="alias">Alias:</label>
+              <input type="text" id="alias" required />
+
+              <label for="banco">Banco:</label>
+              <input type="text" id="banco" required />
+
+              <button type="submit">Agregar contacto</button>
+            </ul>
           </div>
         </div>
-      </div>
-      <div>
-
-       <!-- Formulario para agregar un nuevo contacto -->
-    <form id="addContactForm">
-      <label for="name">Nombre:</label>
-      <input type="text" id="name" required>
-
-      <label for="cbu">CBU:</label>
-      <input type="text" id="cbu" required>
-
-      <label for="alias">Alias:</label>
-      <input type="text" id="alias" required>
-
-      <label for="banco">Banco:</label>
-      <input type="text" id="banco" required>
-
-      <button type="submit">Agregar contacto</button>
-  </form>
       </div>
     </main>
 
@@ -141,7 +135,10 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+   
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="/js/sendmoney.js"></script>
+    <script src="/js/script.js"></script>
+    
   </body>
 </html>
