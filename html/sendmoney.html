@@ -71,17 +71,30 @@
           <div id="liveAlertPlaceholder">
             <ul id="contactList" class="list-group list-group-flush">
               <li class="list-group-item">
-                <button type="submit" class="btn btn-secondary">
+                <button id="addContactBtn" type="submit" class="btn btn-secondary">
                   Agregar nuevo contacto
                 </button>
               </li>
               <li class="list-group-item">
                 <div class="contact-info">
-                  <span class="contact-name">John Doe</span>
-                  <span class="contact-details"
-                    >CBU: 123456789, Alias: john.doe, Banco: ABC Bank</span
-                  >
+                 
                 </div>
+              </li>
+              <li class="list-group-item">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" required />
+              </li>
+              <li class="list-group-item">
+                <label for="cbu">RUT:</label>
+                <input type="text" id="cbu" required />
+              </li>
+              <li class="list-group-item">
+                <label for="alias">Alias:</label>
+              <input type="text" id="alias" required />
+              </li>
+              <li class="list-group-item">
+                <label for="banco">Banco:</label>
+              <input type="text" id="banco" required />
               </li>
               <li class="list-group-item">
                 <button type="submit" id="depositBtn" class="btn btn-secondary">
@@ -93,6 +106,7 @@
                   >Volver al Menú Principal</a
                 >
               </li>
+              
               <li class="list-group-item">
                 <button
                   id="logoutBtn"
@@ -101,20 +115,6 @@
                   Cerrar sesión
                 </button>
               </li>
-              
-              <label for="name">Nombre:</label>
-              <input type="text" id="name" required />
-
-              <label for="cbu">CBU:</label>
-              <input type="text" id="cbu" required />
-
-              <label for="alias">Alias:</label>
-              <input type="text" id="alias" required />
-
-              <label for="banco">Banco:</label>
-              <input type="text" id="banco" required />
-
-              <button type="submit">Agregar contacto</button>
             </ul>
           </div>
         </div>

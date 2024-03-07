@@ -1,55 +1,43 @@
-    // Función para obtener la lista de contactos desde localStorage
-    function getContactList() {
-      const contactListString = localStorage.getItem('contactList');
-      return contactListString ? JSON.parse(contactListString) : [];
+// Add event listener for deposit button
+document.getElementById("depositBtn").addEventListener("click", function() {
+  // Get values of input fields
+  const name = document.getElementById("name").value;
+  const cbu = document.getElementById("cbu").value;
+  const alias = document.getElementById("alias").value;
+  const banco = document.getElementById("banco").value;
+
+  // Validate input
+  if (name === "" || cbu === "" || alias === "" || banco === "") {
+    alert("Todos los campos son obligatorios");
+    return;
   }
 
-  // Función para guardar la lista de contactos en localStorage
-  function saveContactList(contactList) {
-      localStorage.setItem('contactList', JSON.stringify(contactList));
+  // Check if user exists in local storage
+  const users = JSON.parse(localStorage.getItem("users")) || [];
+  const userExists = users.some(user => user.cbu === cbu);
+
+  if (userExists) {
+    alert("El usuario ya existe");
+    return;
   }
 
-  // Función para agregar un nuevo contacto
-  function addContact(name, details) {
-      const contactList = getContactList();
-      contactList.push({ name, details });
-      saveContactList(contactList);
-  }
+  // Create new user
+  users.push({ name, cbu, alias, banco });
 
-  // Función para mostrar la lista de contactos en el HTML
-  function renderContactList() {
-      const contactList = getContactList();
-      const contactListElement = document.getElementById('contactList');
+  // Save users to local storage
+  localStorage.setItem("users", JSON.stringify(users));
 
-      // Limpiar la lista actual
-      contactListElement.innerHTML = '';
-
-      // Mostrar cada contacto en la lista
-      contactList.forEach(contact => {
-          const listItem = document.createElement('li');
-          listItem.className = 'list-group-item';
-          listItem.innerHTML = `
-              <div class="contact-info">
-                  <span class="contact-name">${contact.name}</span>
-                  <span class="contact-details">${contact.details}</span>
-              </div>
-          `;
-          contactListElement.appendChild(listItem);
-      });
-  }
-
-  // Manejar el evento del botón para agregar un nuevo contacto
-  document.querySelector('#addContactBtn').addEventListener('click', function () {
-      const name = prompt('Ingrese el nombre del contacto:');
-      const details = prompt('Ingrese los detalles del contacto:');
-
-      if (name && details) {
-          addContact(name, details);
-          renderContactList();
-      } else {
-          alert('Ingrese un nombre y detalles válidos.');
-      }
+  // Create local transaction
+  const transactions = JSON.parse(localStorage.getItem("transactions")) || [];
+  transactions.push({
+    type: "deposit",
+    amount: 0,
+    date: new Date(),
+    details: { name, cbu, alias, banco }
   });
 
-  // Mostrar la lista de contactos al cargar la página
-  renderContactList();
+  // Save transactions to local storage
+  localStorage.setItem("transactions", JSON.stringify(transactions));
+
+  alert("Transferencia exitosa");
+});
