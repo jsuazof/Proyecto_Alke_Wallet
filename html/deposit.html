@@ -1,35 +1,110 @@
+
 <!DOCTYPE html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wallet - Depositar</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <script
+      src="https://kit.fontawesome.com/afe84ff5fe.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="../css/styles.css" />
+    <title>Alke Wallet</title>
   </head>
+
   <body>
-    <div class="container text-light d-flex justify-content-center flex-column min-vh-100 align-items-center">
-      <h2>Transferencias</h2>
-      <form>
-        <div class="form-group">
-          <label for="depositAmount">Ingrese Cuenta $:</label>
-          <label for="depositAmount">Ingrese Monto $:</label>
-          <input
-            type="number"
-            class="form-control"
-            id="depositAmount"
-            placeholder="Ingresar Monto"
-          />
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-dark bg-body-tertiary mb-3">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/Proyecto_Alke_Wallet/html/menu.html">Alke Wallet</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/Proyecto_Alke_Wallet/html/wallet.html">Depositar/Retirar</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/Proyecto_Alke_Wallet/html/sendmoney.html">Transferencias</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/Proyecto_Alke_Wallet/html/transactions.html"
+                >Últimos Movimientos</a
+              >
+            </li>
+          </ul>
         </div>
-        <button type="submit" class="btn btn-primary">Realizar transferencia</button>
-      </form>
-      <a href="/Proyecto_Alke_Wallet/html/menu.html" class="btn btn-secondary">Volver al Menú Principal</a>
-    </div>
+      </div>
+    </nav>
+    <main>
+      <div class="container">
+        <h2 class="d-flex text-center justify-content-center">
+          Depositar/Retirar
+        </h2>
+        <div class="form-group d-flex justify-content-center">
+          <div class="card border-danger mb-3" style="max-width: 18rem">
+            <div class="card-body text-danger">
+              <label for="amount"><h5>Ingrese cantidad:</h5></label>
+              <input type="number" id="amount" />
+              <h5 class="mt-2">Saldo:</h5>
+              <p id="balance">0</p>
+            </div>
+            <div id="liveAlertPlaceholder">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  <button id="depositBtn" class="btn btn-secondary">
+                    Depositar
+                  </button>
+                </li>
+                <li class="list-group-item">
+                  <button id="withdrawBtn" class="btn btn-secondary">
+                    Retirar
+                  </button>
+                </li>
+                <li class="list-group-item">
+                  <a href="/Proyecto_Alke_Wallet/html/menu.html" class="btn btn-secondary"
+                    >Volver al Menú Principal</a
+                  >
+                </li>
+                <li class="list-group-item">
+                  <button
+                    id="logoutBtn"
+                    class="btn bg-gradient bg-success text-light"
+                  >
+                    Cerrar sesión
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <h1>Alke Wallet</h1>
+      <div>
+        <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
+    </footer>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
