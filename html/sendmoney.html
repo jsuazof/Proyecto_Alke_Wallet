@@ -16,6 +16,7 @@
     ></script>
     <link rel="stylesheet" href="../css/styles.css" />
   </head>
+
   <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg bg-dark bg-body-tertiary mb-3">
@@ -59,93 +60,78 @@
     </nav>
     <main>
       <div class="container">
-        <div class="row">
-          <div class="col">
-            <div class="card mb-3" style="max-width: 540px">
+        <div class="row d-flex justify-content-center align-items-center">
+          <div class="card col-md-8 mb-3" id="addContactForm">
+            <div class="card mb-3" style="max-width: 640px">
               <div class="row g-0">
-                <div class="col-md-4">
-                
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <div
-                      class="form-group d-flex justify-content-center"
-                      id="addContactForm"
-                    >
-                      <div class="card border-danger mb-3">
-                        <div class="card-body text-danger">
-                          <label for="searchContact"
-                            ><h5>Agenda de transferencias:</h5></label
-                          >
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="searchContact"
-                            placeholder="Buscar Contacto"
-                          />
-                        </div>
-                        <div id="liveAlertPlaceholder">
-                          <ul
-                            id="contactList"
-                            class="list-group list-group-flush"
-                          >
-                            <li class="list-group-item">
-                              <button
-                                id="addContactBtn"
-                                type="submit"
-                                class="btn btn-secondary"
-                              >
-                                Agregar nuevo contacto
-                              </button>
-                            </li>
-                            <li class="list-group-item">
-                              <div class="contact-info"></div>
-                            </li>
-                            <li class="list-group-item">
-                              <label for="name">Nombre:</label>
-                              <input type="text" id="name" required />
-                            </li>
-                            <li class="list-group-item">
-                              <label for="cbu">RUT:</label>
-                              <input type="text" id="cbu" required />
-                            </li>
-                            <li class="list-group-item">
-                              <label for="alias">Alias:</label>
-                              <input type="text" id="alias" required />
-                            </li>
-                            <li class="list-group-item">
-                              <label for="banco">Banco:</label>
-                              <input type="text" id="banco" required />
-                            </li>
-                            <li class="list-group-item">
-                              <button
-                                type="submit"
-                                id="depositBtn"
-                                class="btn btn-secondary"
-                              >
-                                Enviar dinero
-                              </button>
-                            </li>
-                            <li class="list-group-item">
-                              <a
-                                href="/Proyecto_Alke_Wallet/html/menu.html"
-                                class="btn btn-secondary"
-                                >Volver al Menú Principal</a
-                              >
-                            </li>
+                <div>
+                  <div class="card-body text-danger">
+                    <label for="searchContact">
+                      <h5>Agenda de transferencias:</h5>
+                    </label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="searchContact"
+                      placeholder="Buscar Contacto"
+                    />
+                  </div>
+                  <div id="liveAlertPlaceholder">
+                    <ul id="contactList" class="list-group list-group-flush">
+                      <li class="list-group-item">
+                        <button
+                          id="addContactBtn"
+                          type="submit"
+                          class="btn btn-secondary"
+                        >
+                          Agregar nuevo contacto
+                        </button>
+                      </li>
+                      <li class="list-group-item">
+                        <div class="contact-info"></div>
+                      </li>
+                      <li class="list-group-item">
+                        <label for="name">Nombre:</label>
+                        <input type="text" id="name" required />
+                      </li>
+                      <li class="list-group-item">
+                        <label for="cbu">RUT:</label>
+                        <input type="text" id="cbu" required />
+                      </li>
+                      <li class="list-group-item">
+                        <label for="alias">Alias:</label>
+                        <input type="text" id="alias" required />
+                      </li>
+                      <li class="list-group-item">
+                        <label for="banco">Banco:</label>
+                        <input type="text" id="banco" required />
+                      </li>
+                      <li class="list-group-item">
+                        <button
+                          type="submit"
+                          id="depositBtn"
+                          class="btn btn-secondary"
+                        >
+                          Enviar dinero
+                        </button>
+                      </li>
+                      <li class="list-group-item">
+                        <a
+                          href="/Proyecto_Alke_Wallet/html/menu.html"
+                          class="btn btn-secondary"
+                          >Volver al Menú Principal</a
+                        >
+                      </li>
 
-                            <li class="list-group-item">
-                              <button
-                                id="logoutBtn"
-                                class="btn bg-gradient bg-success text-light"
-                              >
-                                Cerrar sesión
-                              </button>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
+                      <li class="list-group-item">
+                        <button
+                          id="logoutBtn"
+                          class="btn bg-gradient bg-success text-light"
+                        >
+                          Cerrar sesión
+                        </button>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
