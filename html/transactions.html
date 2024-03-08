@@ -13,24 +13,83 @@
     <link rel="stylesheet" href="../css/styles.css" />
   </head>
   <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-dark bg-body-tertiary mb-3">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Alke Wallet</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/Proyecto_Alke_Wallet/html/wallet.html"
+                >Depositar</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="/Proyecto_Alke_Wallet/html/sendmoney.html"
+                >Enviar Dinero</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="/Proyecto_Alke_Wallet/html/transactions.html"
+                >Últimos Movimientos</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
     <div class="container">
-      <h2>Últimos Movimientos</h2>
-      <ul class="list-group">
-        <li class="list-group-item">Compra en línea - $50.00</li>
-        <li class="list-group-item">Depósito - $100.00</li>
-        <li class="list-group-item">Transferencia recibida - $75.00</li>
-        <li class="list-group-item">Compra en línea - $5550.00</li>
-        <li class="list-group-item">Depósito misma cuenta - $10500.00</li>
-        <li class="list-group-item">Transferencia recibida - $7575.00</li>
-      </ul>
-      <a href="/Proyecto_Alke_Wallet/html/menu.html" class="btn btn-secondary">Volver al Menú Principal</a>
+      <div class="row d-flex justify-content-center align-items-center">
+        <div class="card mb-3" style="max-width: 640px">
+          <h2>Últimos Movimientos</h2>
+          <ul class="list-group">
+            <li class="list-group-item">Compra en línea - $50.00</li>
+            <li class="list-group-item">Depósito - $100.00</li>
+            <li class="list-group-item">Transferencia recibida - $75.00</li>
+            <li class="list-group-item">Compra en línea - $5550.00</li>
+            <li class="list-group-item">Depósito misma cuenta - $10500.00</li>
+            <li class="list-group-item">Transferencia recibida - $7575.00</li>
+          </ul>
+          <a
+            href="/Proyecto_Alke_Wallet/html/menu.html"
+            class="btn btn-secondary"
+            >Volver al Menú Principal</a
+          >
+        </div>
+      </div>
     </div>
+    <footer>
+      <h1>Alke Wallet</h1>
+      <div>
+        <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
+    </footer>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/sendmoney.js"></script>
     <script src="../js/script.js"></script>
   </body>
 </html>
