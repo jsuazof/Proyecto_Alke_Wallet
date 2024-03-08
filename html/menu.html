@@ -37,8 +37,8 @@
   </nav>
   <!-- Main -->
   <main>
-    <div class="container vh-100 d-flex text-center justify-content-center align-items-center">
-      <div class="p-3 card  col-md-8 col-sm-12">
+    <div class="container-fluid d-flex text-center justify-content-center align-items-center vh-100">
+      <div class="p-3 card col-lg-8 col-sm-8 mb-3">
         <h2 class="text-center">
           Menú Principal
         </h2>
@@ -49,22 +49,15 @@
               <h3 class="card-title" id="balance">$150.000</h3>
             </div>
             <div id="liveAlertPlaceholder">
-              <div class="d-flex gap-2 mb-3">
-                <a href="/Proyecto_Alke_Wallet/html/wallet.html">
-                  <button class="btn btn-secondary">
-                    Depositar/Retirar
-                  </button>
+              <div class="mb-3 d-md-inline-flex gap-3 ">
+                <a href="/Proyecto_Alke_Wallet/html/wallet.html" class="btn btn-secondary d-block mb-2">
+                  Depositar/Retirar
                 </a>
-                <a href="/Proyecto_Alke_Wallet/html/sendmoney.html">
-                  <button class="btn btn-secondary">
-                    Transferencias
-                  </button>
+                <a href="/Proyecto_Alke_Wallet/html/sendmoney.html" class="btn btn-secondary d-block mb-2">
+                  Transferencias
                 </a>
-                <a href="/Proyecto_Alke_Wallet/html/transactions.html">
-                  <button class="btn btn-secondary">
-                    Últimos
-                    Movimientos
-                  </button>
+                <a href="/Proyecto_Alke_Wallet/html/transactions.html" class="btn btn-secondary d-block">
+                  Últimos Movimientos
                 </a>
               </div>
               <div>
@@ -79,7 +72,7 @@
     </div>
   </main>
   <!-- Footer -->
-  <footer>
+  <footer class="bg-dark text-light text-center py-2">
     <h1>Alke Wallet</h1>
     <div>
       <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
