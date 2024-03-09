@@ -81,7 +81,9 @@ $(document).ready(function () {
 
 
   function updateBalance() {
-    $("#balance").text(balance.toFixed(2));
+
+    const formattedBalance = balance.toLocaleString('es-CL', { style: 'currency', currency: 'CLP' });
+    $("#balance").text(formattedBalance);
   }
 
   $("#depositBtn").click(function () {
