@@ -70,6 +70,7 @@ $(document).ready(function () {
     $("#logoutBtn").click(function () {
       // Limpiar localStorage al cerrar sesión
       localStorage.removeItem("balance");
+      
 
       // Simulamos cerrar la sesión, puedes agregar tu lógica real aquí
       appendAlert("¡Has cerrado sesión!");
