@@ -55,7 +55,11 @@ footer .social-icons {
   right: 20px;
   top: 50%;
   transform: translateY(-50%);
-  gap: 20px;
+  
+}
+.icon-footer{
+  display: flex;
+  justify-content: space-around;
 }
 
 
