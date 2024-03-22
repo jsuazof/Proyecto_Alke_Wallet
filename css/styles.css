@@ -1,21 +1,39 @@
+/**
+ * This function sets the background color of the body to #100c0c and sets the color to #ffffff
+ */
 body {
   background-color: #100c0c;
   color: #ffffff;
 }
 
+/**
+ * This class sets the width of the custom button to 19rem
+ */
 .custom-btn {
   width: 19rem;
 }
+
+/**
+ * This class sets the display property of the icon-user and icon-key to flex and sets the margin-top and margin-right properties
+ */
 .icon-user {
   display: flex;
   margin-top: 1rem;
   margin-right: 10px;
 }
+
+/**
+ * This class sets the display property of the icon-user and icon-key to flex and sets the margin-top and margin-right properties
+ */
 .icon-key {
   display: flex;
   margin-top: 1rem;
   margin-right: 10px;
 }
+
+/**
+ * This class sets the margin-bottom to 30px, sets the border-radius to 8px, sets the max-width to 100%, sets the height to auto, and adds a transition property with the transform and box-shadow values
+ */
 .alke-icon{
     margin-bottom: 30px;
     border-radius: 8px;
@@ -24,10 +42,18 @@ body {
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Agrega una transición suave a la escala y sombra */
     
 }
+
+/**
+ * This class sets the transform to scale(1.1) and adds a box-shadow with the rgba values when the alke-icon is hovered over
+ */
 .alke-icon:hover{
     transform: scale(1.1); /* Escala la imagen al 110% al pasar el ratón */
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Agrega una sombra al pasar el ratón */
 }
+
+/**
+ * This class sets the background-color of the footer to #333 and sets the color to #fff, sets the text-align to center, sets the padding to 20px, and sets the position to relative
+ */
 footer {
   background-color: #333;
   color: #fff;
@@ -36,33 +62,51 @@ footer {
   position: relative;
 }
 
+/**
+ * This element sets the margin to 0 for the footer h1 element
+ */
 footer h1 {
   margin: 0;
 }
 
+/**
+ * This selector sets the color to #fff for the footer a element and sets the text-decoration to none, sets the margin to 0 for the first child, and sets the margin to 10px for the following siblings
+ */
 footer a {
   color: #fff;
   text-decoration: none;
   margin: 0 10px;
 }
 
+/**
+ * This selector sets the text-decoration to underline for the footer a element when hovered over
+ */
 footer a:hover {
   text-decoration: underline;
 }
 
-footer .social-icons {
+/**
+ * This class sets the position to absolute, sets the right to 20px, sets the top to 50% for the translateY, sets the transform to translateY(-50%), and adds the.social-icons
+ */
+footer.social-icons {
   position: absolute;
   right: 20px;
   top: 50%;
   transform: translateY(-50%);
   
 }
+
+/**
+ * This class sets the display property to flex and sets the justify-content to space-around for the.icon-footer
+ */
 .icon-footer{
   display: flex;
   justify-content: space-around;
 }
+
+/**
+ * This class sets the font-size to 2rem for the.saldo element
+ */
 .saldo{
   font-size: 2rem;
 }
-
-
